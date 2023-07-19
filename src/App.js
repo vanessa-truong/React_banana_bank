@@ -9,6 +9,16 @@ function App() {
     setCash(Number(event.target.value));
   };
 
+  const handleEinzahlen = () => {
+    setCount(count + cash);
+    setCash(0);
+  };
+
+  const handleAuszahlen = () => {
+    setCount(count - cash);
+    setCash(0);
+  };
+
   return (
     <div className="App">
       <header className="header">
@@ -25,11 +35,12 @@ function App() {
           className="geldbetrag"
           onChange={cashChange}
           placeholder="Gib einen Geldbetrag ein"
+          value={cash}
         />
-        <button className="einzahlen" onClick={() => setCount(count + cash)}>
+        <button className="einzahlen" onClick={handleEinzahlen}>
           Einzahlen
         </button>
-        <button className="auszahlen" onClick={() => setCount(count - cash)}>
+        <button className="auszahlen" onClick={handleAuszahlen}>
           Auszahlen
         </button>
       </header>
