@@ -37,7 +37,6 @@
   }
 }
 
-
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
 @import url(http://fonts.googleapis.com/css?family=Ruluko);
 
@@ -45,7 +44,7 @@ body {
   font-family: "Ruluko", sans-serif;
   margin: 0px auto;
   text-align: center;
-  width: 700px;
+  width: 35rem;
 }
 
 .header {
@@ -54,11 +53,13 @@ body {
 
 #logoImg {
   width: 100px;
+  margin-bottom: 10px;
   height: 100px;
+  border-radius: 20px;
 }
 
 #title {
-  color: #fbec5d;
+  color: #d6c957;
   background-color: #fffbc9;
   border-radius: 5px;
   font-family: "Oleo Script", cursive;
@@ -88,16 +89,39 @@ body {
   padding: 25px 0px;
 }
 .geldbetrag {
-  margin: 0 0.25rem;
-  min-width: 125px;
-  border: 1px solid #eee;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0.25rem;
+  min-width: 12rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.5s ease-out;
+  outline: none;
 }
+input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .auszahlen,
 .einzahlen {
   margin: 5px;
-  background-color: #fbec5d;
-  color: #6b3e26;
-  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #fddb4d;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.auszahlen:hover,
+.einzahlen:hover {
+  background-color: #ffed9d;
+  transform: scale(1.05);
+}
+.auszahlen:active,
+.einzahlen:active {
+  background-color: #fddb4d;
+  transform: scale(0.95);
 }
