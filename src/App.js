@@ -28,7 +28,7 @@ function App() {
           id="logoImg"
         />
         <h1 id="title">Banana Bank</h1>
-        <p className="saldo">Dein Girokonto:{count} EUR</p>
+        <p className="saldo">Dein Girokonto: {count} EUR</p>
         <input
           type="number"
           name=""
