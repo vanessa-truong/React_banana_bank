@@ -10,9 +10,6 @@ const cashChange = (event) => {
   setCash(Number(event.target.value));
 }
 
-
-
-
   return (
 
     <div className="App">
@@ -23,11 +20,6 @@ const cashChange = (event) => {
       <input type="number" name="" className='geldbetrag' onChange={cashChange} placeholder='Gib einen Geldbetrag ein'/>
       <button className='einzahlen' onClick={() => setCount(count + cash)}>Einzahlen</button>
       <button className='auszahlen' onClick={() => setCount(count - cash)}>Auszahlen</button>
-      
-
-
-
-
       </header>
     </div>
   );
