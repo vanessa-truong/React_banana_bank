@@ -1,22 +1,45 @@
 import { useState } from "react";
 import "./App.css";
 
+function formatCurrency(amount) {
+  return new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR",
+  }).format(amount);
+}
+
+function parseCurrencyValue(value) {
+  const cleanedValue = value.toString().replace(/[^\d.,]/g, ""); // Remove all non-numeric characters except dot and comma
+  const parsedValue = cleanedValue.replace(",", "."); // Replace comma with dot for parsing
+  return parseFloat(parsedValue);
+}
+
 function App() {
   const [count, setCount] = useState(0);
-  const [cash, setCash] = useState(0);
+  const [cash, setCash] = useState("");
 
   const cashChange = (event) => {
     setCash(Number(event.target.value));
   };
 
   const handleEinzahlen = () => {
-    setCount(count + cash);
-    setCash(0);
+    if (cash !== "") {
+      setCount(count + parseCurrencyValue(cash));
+      setCash("");
+    }
   };
 
   const handleAuszahlen = () => {
-    setCount(count - cash);
-    setCash(0);
+    if (cash !== "") {
+      setCount(count - parseCurrencyValue(cash));
+      setCash("");
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleEinzahlen(); // You can customize this based on your needs
+    }
   };
 
   return (
@@ -28,12 +51,13 @@ function App() {
           id="logoImg"
         />
         <h1 id="title">Banana Bank</h1>
-        <p className="saldo">Dein Girokonto: {count} EUR</p>
+        <p className="saldo">Dein Girokonto: {formatCurrency(count)} EUR</p>
         <input
-          type="number"
+          type="text"
           name=""
           className="geldbetrag"
           onChange={cashChange}
+          onKeyDown={handleKeyDown}
           placeholder="Gib einen Geldbetrag ein"
           value={cash}
         />
