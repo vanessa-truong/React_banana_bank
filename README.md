@@ -1,16 +1,16 @@
-Projektbeschreibung: Banana Bank
+Project Description: Banana Bank
 
-Die "Banana Bank" ist ein einfaches Frontend-Projekt, das mit React erstellt wurde. Diese Webanwendung simuliert ein virtuelles Girokonto, auf dem Benutzer Geld einzahlen und abheben können. Das Projekt bietet folgende Funktionen:
+"Banana Bank" is a frontend project built using React. This web application simulates a virtual checking account where users can deposit and withdraw money. The project includes the following features:
 
-Einzahlung von Geldbeträgen.
+Deposit money.
 
-Abheben von Geldbeträgen.
+Withdraw money.
 
-Anzeige des aktuellen Kontostands in Euro (EUR) mit Formattierung der Währung.
+Display the current account balance in Euro (EUR) with currency formatting.
 
-Interaktive Benutzeroberfläche mit Einzahlungs- und Auszahlungsschaltflächen.
+Interactive user interface with deposit and withdrawal buttons.
 
-Das Ziel dieses Projekts ist es, grundlegende React-Kenntnisse zu zeigen und die Verwendung von Variablen, Ereignishandlern und CSS-Styling in einer einfachen Anwendung zu demonstrieren.
+The aim of this project is to showcase fundamental React knowledge and demonstrate the use of variables, event handlers, and CSS styling in a simple application.
 
 
 https://glittery-crepe-a6ca5c.netlify.app
