@@ -41,6 +41,7 @@ body {
   margin: 50px 0px;
 }
 
+/* Stil für das Logo */
 #logoImg {
   width: 100px;
   margin-bottom: 10px;
@@ -48,6 +49,7 @@ body {
   border-radius: 20px;
 }
 
+/* Stil für den Titel */
 #title {
   color: #d6c957;
   background-color: #fffbc9;
@@ -57,6 +59,7 @@ body {
   margin: 0;
 }
 
+/* Stil für das Konto */
 .konto {
   color: #6b3e26;
   background-color: #fffbc9;
@@ -68,6 +71,7 @@ body {
   width: 300px;
 }
 
+/* Stil für den Saldo */
 .saldo {
   background-color: #fbec5d;
   color: #282c34;
@@ -78,6 +82,8 @@ body {
   margin: 5px;
   padding: 25px 0px;
 }
+
+/* Stil für den Geldbetrag */
 .geldbetrag {
   padding: 10px 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,10 +94,8 @@ body {
   transition: border-color 0.5s ease-out;
   outline: none;
 }
-input:focus {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
+/* Stil für den Button zum Einzahlen und Auszahlen */
 .auszahlen,
 .einzahlen {
   margin: 5px;
@@ -105,11 +109,13 @@ input:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .auszahlen:hover,
 .einzahlen:hover {
   background-color: #ffed9d;
   transform: scale(1.05);
 }
+
 .auszahlen:active,
 .einzahlen:active {
   background-color: #fddb4d;
