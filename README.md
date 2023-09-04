@@ -1,4 +1,4 @@
-Project Description: Banana Bank
+## Project Description: Banana Bank
 
 "Banana Bank" is a frontend project built using React. This web application simulates a virtual checking account where users can deposit and withdraw money. The project includes the following features:
 
